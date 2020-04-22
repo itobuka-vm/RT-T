@@ -44,13 +44,43 @@ header {
   background-color: bisque;
 }
 
-.todo-container {
-  display: flex;
-}
-
-.todo-container .todo-list {
+.todo-list {
   margin: auto;
   padding: 2px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5px;
+  justify-content: space-around;
+}
+
+.contact-card {
+  width: 300px;
+  height: auto;
+  padding: 5px;
+}
+
+.contact-card h3 {
+  text-align: center;
+}
+
+.contact-card img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+
+.joke-list {
+  margin: auto;
+  padding: 2rem 5rem;
+  background-color: hotpink;
+}
+
+.joke-list li {
+  padding: 0.5rem;
 }
 
 /*** FOOTER SECTION ***/

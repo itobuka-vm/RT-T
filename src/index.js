@@ -17,7 +17,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-//import index.css
+//import CSS style
 import "./style.css"
 
 //import App component
