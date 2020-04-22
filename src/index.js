@@ -1,17 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+/*
+  root(index)/
+    App/
+      Header/
+        Header-info
+        Nav
+      Main/
+        Landing
+        About
+        Gallery
+      Footer/
+        Footer-info
+        Footer-copyright
+*/
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// import React and ReactDOM libraries
+import React from "react"
+import ReactDOM from "react-dom"
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+//import index.css
+import "./style.css"
+
+//import App component
+import App from "./App"
+
+//render JSX into a DOM element
+ReactDOM.render(<App />, document.getElementById("root"))
