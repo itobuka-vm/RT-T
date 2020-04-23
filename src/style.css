@@ -29,6 +29,7 @@ header {
   display: block;
   justify-content: center;
   text-align: center;
+  opacity: 0.5;
   /*** FIXED HEADER ***/
   position: fixed;
   top: 0;
@@ -36,12 +37,23 @@ header {
 }
 
 /*** MAIN SECTION ***/
+/* main {
+  position: relative;
+} */
+
 .landing-section {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100vh;
   background-color: bisque;
+}
+
+.bg-placeholder {
+  height: 100vh;
+  background-image: url("https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?cs=srgb&dl=daylight-environment-forest-idyllic-459225.jpg&fm=jpg");
+  background-position: center; /* Center the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 .todo-list {

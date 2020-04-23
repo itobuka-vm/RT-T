@@ -5,7 +5,7 @@ import React from "react"
 function MainLanding() {
   return (
     <div className='landing-section'>
-      <h3>Landing Section</h3>
+      <div className='bg-placeholder'></div>
     </div>
   )
 }
