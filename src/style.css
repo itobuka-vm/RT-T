@@ -36,10 +36,21 @@ header {
   overflow: hidden;
 }
 
+.header-info {
+  display: flex;
+  justify-content: space-between;
+  height: 2rem;
+}
+
+.header-info > p {
+  padding: 3px 10px;
+}
+
+.header-nav {
+  padding: 3px 10px;
+}
+
 /*** MAIN SECTION ***/
-/* main {
-  position: relative;
-} */
 
 .landing-section {
   margin: 0;
@@ -51,7 +62,7 @@ header {
 
 .bg-placeholder {
   height: 100vh;
-  background-image: url("https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?cs=srgb&dl=daylight-environment-forest-idyllic-459225.jpg&fm=jpg");
+  background-image: url("./assets/img01.jpg");
   background-position: center; /* Center the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }

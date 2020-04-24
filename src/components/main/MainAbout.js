@@ -7,11 +7,21 @@ import TodoItem from "./TodoItem"
 //import ContactCard component
 import ContactCard from "./ContactCard"
 
-//impoer Joke component
+//import Joke component
 import Joke from "./Joke"
+
+//import joke data - fake JSON
+import jokeData from "./jokeData"
 
 //render JSX into a DOM
 function MainAbout() {
+  //map() through jokeData`s array of objects to create array of Components (Joke)
+  const jokeComponents = jokeData.map(function (joke) {
+    return (
+      <Joke key={joke.id} question={joke.question} punchLine={joke.punchLine} />
+    )
+  })
+
   return (
     <div className='main__about'>
       <h3>About Section</h3>
@@ -26,8 +36,7 @@ function MainAbout() {
         <ContactCard
           contact={{
             name: "First Name",
-            imgUrl:
-              "https://images.pexels.com/photos/3861447/pexels-photo-3861447.jpeg?cs=srgb&dl=portrait-of-woman-sitting-on-chair-3861447.jpg&fm=jpg",
+            imgUrl: "./img01.jpg",
             phone: "first contact phone",
             email: "first contact email"
           }}
@@ -52,36 +61,8 @@ function MainAbout() {
         />
       </div>
       <br />
-      <ol className='joke-list'>
-        <Joke
-          joke={{
-            question: "First question",
-            punchLine: "First punch line"
-          }}
-        />
-        <Joke
-          joke={{
-            question: "Second question",
-            punchLine: "Second punch line"
-          }}
-        />
-        <Joke
-          joke={{
-            punchLine: "Third punch line"
-          }}
-        />
-        <Joke
-          joke={{
-            question: "Forth question",
-            punchLine: "Forth punch line"
-          }}
-        />
-        <Joke
-          joke={{
-            punchLine: "Fifth punch line"
-          }}
-        />
-      </ol>
+      {/* display array of Components (Joke) */}
+      <div className='joke-list'>{jokeComponents}</div>
     </div>
   )
 }

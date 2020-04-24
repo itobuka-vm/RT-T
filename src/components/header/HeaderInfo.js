@@ -5,7 +5,16 @@ import React from "react"
 function HeaderInfo() {
   return (
     <div className='header-info'>
-      <h3>Header Info Section</h3>
+      <p>Company Name</p>
+      <p>Company Address</p>
+      <p>Company Email and Phone</p>
+      <p>
+        Language
+        <select>
+          <option>Serbian</option>
+          <option>Spanish</option>
+        </select>
+      </p>
     </div>
   )
 }
