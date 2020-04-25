@@ -2,7 +2,7 @@
 import React from "react"
 
 //render JSX into a DOM
-function MainLanding() {
+function Landing() {
   return (
     <div className='landing-section'>
       <div className='bg-placeholder'></div>
@@ -11,4 +11,4 @@ function MainLanding() {
 }
 
 //export MainLanding component
-export default MainLanding
+export default Landing

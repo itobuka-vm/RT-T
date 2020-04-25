@@ -2,17 +2,17 @@
 import React from "react"
 
 //import Main components
-import MainLanding from "./MainLanding"
-import MainAbout from "./MainAbout"
-import MainGallery from "./MainGallery"
+import Landing from "./Landing"
+import Content from "./Content"
+import Gallery from "./Gallery"
 
 //render JSX into a DOM
 function Main() {
   return (
     <main>
-      <MainLanding />
-      <MainAbout />
-      <MainGallery />
+      <Landing />
+      <Content />
+      <Gallery />
     </main>
   )
 }

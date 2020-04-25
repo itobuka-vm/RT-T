@@ -1,5 +1,5 @@
 // put data in array of objects - fake JSON
-const imagesData = [
+const dataImages = [
   {
     id: 1,
     name: "img01",
@@ -33,4 +33,4 @@ const imagesData = [
 ]
 
 //export jokes data in array of objects
-export default imagesData
+export default dataImages

@@ -11,8 +11,8 @@ function HeaderInfo() {
       <p>
         Language
         <select>
-          <option>Serbian</option>
-          <option>Spanish</option>
+          <option>Srpski</option>
+          <option>Espanol</option>
         </select>
       </p>
     </div>

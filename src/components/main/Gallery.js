@@ -2,13 +2,13 @@
 import React from "react"
 
 //render JSX into a DOM
-function MainGallery() {
+function Gallery() {
   return (
-    <div className='main__gallery'>
+    <div className='gallery'>
       <h3>Gallery Section</h3>
     </div>
   )
 }
 
 //export MainGallery component
-export default MainGallery
+export default Gallery

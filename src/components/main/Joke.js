@@ -8,8 +8,8 @@ import "./../../style.css"
 function Joke(props) {
   return (
     <li className='joke-item'>
-      <p>Question: {props.question}</p>
-      <p>Punch line: {props.punchLine}</p>
+      <p>{props.question}</p>
+      <p>{props.punchLine}</p>
       <hr />
     </li>
   )

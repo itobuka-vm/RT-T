@@ -51,8 +51,7 @@ header {
 }
 
 /*** MAIN SECTION ***/
-
-.landing-section {
+.landing {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -62,7 +61,7 @@ header {
 
 .bg-placeholder {
   height: 100vh;
-  background-image: url("./assets/img01.jpg");
+  background-image: url("./assets/landing-img.jpg");
   background-position: center; /* Center the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
@@ -72,6 +71,23 @@ header {
   padding: 2px;
 }
 
+.product-container ul {
+  list-style-type: none;
+  padding: 0.5rem;
+}
+
+.product-container li {
+  border-left: 3px solid palevioletred;
+  border-bottom: 3px solid palevioletred;
+  /* border: 3px solid palevioletred; */
+  border-radius: 5px;
+}
+
+.product-container p {
+  padding: 0.5rem;
+}
+
+.product-list,
 .contact-list {
   display: flex;
   flex-direction: row;
@@ -80,6 +96,7 @@ header {
   justify-content: space-around;
 }
 
+.product-img,
 .contact-card {
   width: 300px;
   height: auto;
