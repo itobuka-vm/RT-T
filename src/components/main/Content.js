@@ -23,6 +23,7 @@ function Content() {
         imgAlt={product.imgAlt}
         name={product.name}
         price={product.price}
+        productDescription={product.productDescription}
       />
     )
   })

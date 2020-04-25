@@ -10,6 +10,7 @@ function Product(props) {
           <img src={props.imgUrl} alt={props.imgAlt} className='product-img' />
           <p>Product: {props.name}</p>
           <p>Price: {props.price}</p>
+          <p>Product description: {props.productDescription}</p>
         </li>
       </ul>
     </div>

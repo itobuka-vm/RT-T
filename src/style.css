@@ -77,10 +77,16 @@ header {
 }
 
 .product-container li {
+  width: 400px;
   border-left: 3px solid palevioletred;
   border-bottom: 3px solid palevioletred;
   /* border: 3px solid palevioletred; */
   border-radius: 5px;
+  text-align: justify;
+}
+
+.product-container .product-img {
+  width: 350px;
 }
 
 .product-container p {
@@ -92,13 +98,12 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 5px;
+  padding: 2.5rem;
   justify-content: space-around;
 }
 
-.product-img,
 .contact-card {
-  width: 300px;
+  width: 250px;
   height: auto;
   padding: 5px;
 }
@@ -108,7 +113,7 @@ header {
 }
 
 .contact-card img {
-  width: 300px;
+  width: 250px;
   height: auto;
   object-fit: cover;
 }
