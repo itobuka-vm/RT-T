@@ -9,6 +9,7 @@ import FooterCopyright from "./FooterCopyright"
 import "./../../style.css"
 
 //render JSX into a DOM
+/* FUNCTIONAL COMPONENT
 function Footer() {
   return (
     <footer>
@@ -16,6 +17,19 @@ function Footer() {
       <FooterCopyright />
     </footer>
   )
+} */
+
+//CLASS BASED COMPONENT
+class Footer extends React.Component {
+  //must have Render method
+  render() {
+    return (
+      <footer>
+        <FooterInfo />
+        <FooterCopyright />
+      </footer>
+    )
+  }
 }
 
 //export Footer component

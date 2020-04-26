@@ -7,6 +7,7 @@ import Content from "./Content"
 import Gallery from "./Gallery"
 
 //render JSX into a DOM
+/* FUNCTIONAL COMPONENT
 function Main() {
   return (
     <main>
@@ -15,6 +16,19 @@ function Main() {
       <Gallery />
     </main>
   )
+} */
+
+//CLASS BASED COMPONENT
+class Main extends React.Component {
+  render() {
+    return (
+      <main>
+        <Landing />
+        <Content />
+        <Gallery />
+      </main>
+    )
+  }
 }
 
 //export Main component

@@ -9,6 +9,7 @@ import HeaderNav from "./HeaderNav"
 import "./../../style.css"
 
 //render JSX into a DOM
+/* FUNCTIONAL COMPONENT
 function Header() {
   return (
     <header>
@@ -16,6 +17,18 @@ function Header() {
       <HeaderNav />
     </header>
   )
+} */
+
+//CLASS BASED COMPONENT
+class Header extends React.Component {
+  render() {
+    return (
+      <header>
+        <HeaderInfo />
+        <HeaderNav />
+      </header>
+    )
+  }
 }
 
 //export Header component

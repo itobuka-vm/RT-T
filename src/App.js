@@ -7,6 +7,7 @@ import Main from "./components/main/Main"
 import Footer from "./components/footer/Footer"
 
 //render JSX into a DOM element
+/* FUNCTIONAL COMPONENT
 function App() {
   return (
     <div className='app'>
@@ -15,6 +16,21 @@ function App() {
       <Footer />
     </div>
   )
+}
+*/
+
+//CLASS BASED COMPONENT
+class App extends React.Component {
+  //must have Render method
+  render() {
+    return (
+      <div className='app'>
+        <Header />
+        <Main />
+        <Footer />
+      </div>
+    )
+  }
 }
 
 //export App component

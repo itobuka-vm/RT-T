@@ -16,6 +16,7 @@ import dataCars from "../../data/dataCars"
 import dataToDos from "../../data/dataToDos"
 
 //render JSX into a DOM
+/* FUNCTIONAL COMPONENT
 function Content() {
   //TODO
   const todoItems = dataToDos.map(function (item) {
@@ -49,24 +50,68 @@ function Content() {
   return (
     <div className='content'>
       {/* testing img display from src/ &&/|| public/
-      <img src={"assets/img02.jpg"} alt='altos' /> */}
+      <img src={"assets/img02.jpg"} alt='altos' /> 
       <h3>About Section</h3>
-      {/* TODO app from lessons */}
+      {/* TODO app from lessons 
       <div className='todo-list'>{todoItems}</div>
       <hr />
-      {/* practice mapping components */}
+      {/* practice mapping components 
       <div className='product-list'>{productComponents}</div>
       <hr />
-      {/* display array of Components (contactComponents) */}
+      {/* display array of Components (contactComponents) 
       <div className='contact-list'>{contactComponents}</div>
       <hr />
-      {/* display array of Components (jokeComponents) */}
+      {/* display array of Components (jokeComponents) 
       <div className='joke-list'>{jokeComponents}</div>
       <hr />
-      {/* carComponents */}
+      {/* carComponents 
       <div className='car-list'>{carComponents}</div>
     </div>
   )
+} */
+
+//CLASS BASED COMPONENT
+class Content extends React.Component {
+  render() {
+    //TODO
+    const todoItems = dataToDos.map((item) => (
+      <TodoItem key={item.id} todo={item} />
+    ))
+
+    //PRODUCTS
+    const productComponents = dataProducts.map((item) => (
+      <Product key={item.id} product={item} />
+    ))
+
+    //JOKES
+    const jokeComponents = dataJokes.map((item) => (
+      <Joke key={item.id} joke={item} />
+    ))
+
+    //CONTACTS
+    const contactComponents = dataContacts.map((item) => (
+      <ContactCard key={item.id} contact={item} />
+    ))
+
+    //CARS
+    const carComponents = dataCars.map((item) => (
+      <Car key={item.id} car={item} />
+    ))
+
+    return (
+      <div className='content'>
+        <div className='todo-list'>{todoItems}</div>
+        <hr />
+        <div className='product-list'>{productComponents}</div>
+        <hr />
+        <div className='contact-list'>{contactComponents}</div>
+        <hr />
+        <div className='joke-list'>{jokeComponents}</div>
+        <hr />
+        <div className='car-list'>{carComponents}</div>
+      </div>
+    )
+  }
 }
 
 //export MainAbout component

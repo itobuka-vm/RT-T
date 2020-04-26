@@ -5,6 +5,7 @@ import React from "react"
 import "./../../style.css"
 
 //render JSX into a DOM element
+/* FUNCTIONAL COMPONENT
 function TodoItem(props) {
   return (
     <div className='todo-item'>
@@ -12,6 +13,18 @@ function TodoItem(props) {
       <p>{props.todo.text}</p>
     </div>
   )
+} */
+
+//CLASS BASED COMPONENT
+class TodoItem extends React.Component {
+  render() {
+    return (
+      <div className='todo-item'>
+        <input type='checkbox' checked={this.props.todo.completed} />
+        <p>{this.props.todo.text}</p>
+      </div>
+    )
+  }
 }
 
 //export TodoItem component
