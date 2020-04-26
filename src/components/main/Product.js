@@ -7,10 +7,14 @@ function Product(props) {
     <div className='product-container'>
       <ul>
         <li>
-          <img src={props.imgUrl} alt={props.imgAlt} className='product-img' />
-          <p>Product: {props.name}</p>
-          <p>Price: {props.price}</p>
-          <p>Product description: {props.productDescription}</p>
+          <img
+            src={props.product.imgUrl}
+            alt={props.product.imgAlt}
+            className='product-img'
+          />
+          <h3>{props.product.name}</h3>
+          <p>Price: {props.product.price}</p>
+          <p>Product description: {props.product.productDescription}</p>
         </li>
       </ul>
     </div>

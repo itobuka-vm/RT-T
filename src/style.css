@@ -89,10 +89,12 @@ header {
   width: 350px;
 }
 
-.product-container p {
+.product-container,
+h3,
+p {
   padding: 0.5rem;
 }
-
+.car-list,
 .product-list,
 .contact-list {
   display: flex;
