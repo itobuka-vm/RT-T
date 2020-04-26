@@ -30,6 +30,38 @@ const dataCars = [
     carName: "Grande Punto",
     carYear: 2011,
     carPrice: 3500
+  },
+  {
+    id: 5,
+    carImgUrl: "./assets/images/img01.jpg",
+    carBrand: "Opel",
+    carName: "Astra",
+    carYear: 2005,
+    carPrice: 3000
+  },
+  {
+    id: 6,
+    carImgUrl: "./assets/images/img02.jpg",
+    carBrand: "Mercedes",
+    carName: "S300",
+    carYear: 2020,
+    carPrice: 5000
+  },
+  {
+    id: 7,
+    carImgUrl: "./assets/images/img03.jpg",
+    carBrand: "Volkswagen",
+    carName: "Tiguan",
+    carYear: 2011,
+    carPrice: 10000
+  },
+  {
+    id: 8,
+    carImgUrl: "./assets/images/img04.jpg",
+    carBrand: "Pegaout",
+    carName: "208",
+    carYear: 2007,
+    carPrice: 4500
   }
 ]
 

@@ -9,10 +9,10 @@ import Product from "./Product"
 import Car from "./Car"
 
 //import data - fake JSON/dummy DB
-import dataJokes from "./dataJokes"
-import dataContacts from "./dataContacts"
-import dataProducts from "./dataProducts"
-import dataCars from "./dataCars"
+import dataJokes from "../../data/dataJokes"
+import dataContacts from "../../data/dataContacts"
+import dataProducts from "../../data/dataProducts"
+import dataCars from "../../data/dataCars"
 
 //render JSX into a DOM
 function Content() {
@@ -45,6 +45,7 @@ function Content() {
       {/* testing img display from src/ &&/|| public/
       <img src={"assets/img02.jpg"} alt='altos' /> */}
       <h3>About Section</h3>
+      {/* TODO app from lessons */}
       <div className='todo-list'>
         <TodoItem />
         <TodoItem />
@@ -52,6 +53,7 @@ function Content() {
         <TodoItem />
       </div>
       <hr />
+      {/* practice mapping components */}
       <div className='product-list'>{productComponents}</div>
       <hr />
       {/* display array of Components (contactComponents) */}
