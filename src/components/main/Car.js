@@ -10,7 +10,13 @@ function Car(props) {
         style={{ width: "250px", height: "250px" }}
       />
       <p>Year: {props.car.carYear}</p>
-      <p>Price: {props.car.carPrice}</p>
+      <p>
+        Price:{" "}
+        {props.car.carPrice.toLocaleString("sr-RS", {
+          style: "currency",
+          currency: "EUR"
+        })}
+      </p>
     </div>
   )
 }

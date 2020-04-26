@@ -5,11 +5,11 @@ import React from "react"
 import "./../../style.css"
 
 //render JSX into a DOM element
-function TodoItem() {
+function TodoItem(props) {
   return (
     <div className='todo-item'>
-      <input type='checkbox' />
-      <p>placeholder text</p>
+      <input type='checkbox' checked={props.todo.completed} />
+      <p>{props.todo.text}</p>
     </div>
   )
 }

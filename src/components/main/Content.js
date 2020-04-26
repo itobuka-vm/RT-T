@@ -13,9 +13,15 @@ import dataJokes from "../../data/dataJokes"
 import dataContacts from "../../data/dataContacts"
 import dataProducts from "../../data/dataProducts"
 import dataCars from "../../data/dataCars"
+import dataToDos from "../../data/dataToDos"
 
 //render JSX into a DOM
 function Content() {
+  //TODO
+  const todoItems = dataToDos.map(function (item) {
+    return <TodoItem key={item.id} todo={item} />
+  })
+
   //PRODUCTS
   //map() through dataProducts to create an array of components
   const productComponents = dataProducts.map(function (item) {
@@ -46,12 +52,7 @@ function Content() {
       <img src={"assets/img02.jpg"} alt='altos' /> */}
       <h3>About Section</h3>
       {/* TODO app from lessons */}
-      <div className='todo-list'>
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
-      </div>
+      <div className='todo-list'>{todoItems}</div>
       <hr />
       {/* practice mapping components */}
       <div className='product-list'>{productComponents}</div>
@@ -62,6 +63,7 @@ function Content() {
       {/* display array of Components (jokeComponents) */}
       <div className='joke-list'>{jokeComponents}</div>
       <hr />
+      {/* carComponents */}
       <div className='car-list'>{carComponents}</div>
     </div>
   )
