@@ -15,6 +15,10 @@ import dataProducts from "../../data/dataProducts"
 import dataCars from "../../data/dataCars"
 import dataToDos from "../../data/dataToDos"
 
+//import StateComponent - state practice
+import StateComponent from "./StateComponent"
+import Login from "./Login"
+
 //render JSX into a DOM
 /* FUNCTIONAL COMPONENT
 function Content() {
@@ -73,24 +77,9 @@ function Content() {
 //CLASS BASED COMPONENT
 class Content extends React.Component {
   render() {
-    //TODO
-    const todoItems = dataToDos.map((item) => (
-      <TodoItem key={item.id} todo={item} />
-    ))
-
     //PRODUCTS
     const productComponents = dataProducts.map((item) => (
       <Product key={item.id} product={item} />
-    ))
-
-    //JOKES
-    const jokeComponents = dataJokes.map((item) => (
-      <Joke key={item.id} joke={item} />
-    ))
-
-    //CONTACTS
-    const contactComponents = dataContacts.map((item) => (
-      <ContactCard key={item.id} contact={item} />
     ))
 
     //CARS
@@ -98,17 +87,36 @@ class Content extends React.Component {
       <Car key={item.id} car={item} />
     ))
 
+    //CONTACTS
+    const contactComponents = dataContacts.map((item) => (
+      <ContactCard key={item.id} contact={item} />
+    ))
+
+    //TODO
+    const todoItems = dataToDos.map((item) => (
+      <TodoItem key={item.id} todo={item} />
+    ))
+
+    //JOKES
+    const jokeComponents = dataJokes.map((item) => (
+      <Joke key={item.id} joke={item} />
+    ))
+
     return (
       <div className='content'>
-        <div className='todo-list'>{todoItems}</div>
-        <hr />
         <div className='product-list'>{productComponents}</div>
+        <hr />
+        <div className='car-list'>{carComponents}</div>
         <hr />
         <div className='contact-list'>{contactComponents}</div>
         <hr />
+        <div className='todo-list'>{todoItems}</div>
+        <hr />
         <div className='joke-list'>{jokeComponents}</div>
         <hr />
-        <div className='car-list'>{carComponents}</div>
+        <StateComponent />
+        <hr />
+        <Login />
       </div>
     )
   }
