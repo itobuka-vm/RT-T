@@ -17,7 +17,9 @@ function TodoItem(props) {
 
 //CLASS BASED COMPONENT
 class TodoItem extends React.Component {
+  //render method
   render() {
+    //return JSX
     return (
       <div className='todo-item'>
         <input type='checkbox' checked={this.props.todo.completed} />

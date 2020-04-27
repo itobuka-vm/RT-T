@@ -76,29 +76,44 @@ function Content() {
 
 //CLASS BASED COMPONENT
 class Content extends React.Component {
+  //constructor method
+  constructor() {
+    //super() - global method
+    super()
+    //state object
+    this.state = {
+      //pass imported DATA into STATE object properties
+      products: dataProducts,
+      cars: dataCars,
+      contacts: dataContacts,
+      todos: dataToDos,
+      jokes: dataJokes
+    }
+  }
+
   render() {
-    //PRODUCTS
-    const productComponents = dataProducts.map((item) => (
+    //PRODUCTS - map() method through data in state
+    const productComponents = this.state.products.map((item) => (
       <Product key={item.id} product={item} />
     ))
 
     //CARS
-    const carComponents = dataCars.map((item) => (
+    const carComponents = this.state.cars.map((item) => (
       <Car key={item.id} car={item} />
     ))
 
     //CONTACTS
-    const contactComponents = dataContacts.map((item) => (
+    const contactComponents = this.state.contacts.map((item) => (
       <ContactCard key={item.id} contact={item} />
     ))
 
     //TODO
-    const todoItems = dataToDos.map((item) => (
+    const todoItems = this.state.todos.map((item) => (
       <TodoItem key={item.id} todo={item} />
     ))
 
     //JOKES
-    const jokeComponents = dataJokes.map((item) => (
+    const jokeComponents = this.state.jokes.map((item) => (
       <Joke key={item.id} joke={item} />
     ))
 
