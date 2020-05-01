@@ -19,6 +19,9 @@ import dataToDos from "../../data/dataToDos"
 import StateComponent from "./StateComponent"
 import Login from "./Login"
 
+//event practice
+import Event from "./Event"
+
 //render JSX into a DOM
 /* FUNCTIONAL COMPONENT
 function Content() {
@@ -132,6 +135,8 @@ class Content extends React.Component {
         <StateComponent />
         <hr />
         <Login />
+        <hr />
+        <Event />
       </div>
     )
   }

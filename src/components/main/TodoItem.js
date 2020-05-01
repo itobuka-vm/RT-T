@@ -22,7 +22,13 @@ class TodoItem extends React.Component {
     //return JSX
     return (
       <div className='todo-item'>
-        <input type='checkbox' checked={this.props.todo.completed} />
+        <input
+          type='checkbox'
+          checked={this.props.todo.completed}
+          onChange={function () {
+            console.log("trying to change")
+          }}
+        />
         <p>{this.props.todo.text}</p>
       </div>
     )
