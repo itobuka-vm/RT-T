@@ -25,6 +25,7 @@ class TodoItem extends React.Component {
         <input
           type='checkbox'
           checked={this.props.todo.completed}
+          /* event inline function */
           onChange={function () {
             console.log("trying to change")
           }}

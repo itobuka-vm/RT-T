@@ -21,6 +21,7 @@ import Login from "./Login"
 
 //event practice
 import Event from "./Event"
+import StateChanger from "./StateChanger"
 
 //render JSX into a DOM
 /* FUNCTIONAL COMPONENT
@@ -137,6 +138,8 @@ class Content extends React.Component {
         <Login />
         <hr />
         <Event />
+        <hr />
+        <StateChanger />
       </div>
     )
   }
