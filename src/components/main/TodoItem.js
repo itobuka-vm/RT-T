@@ -5,18 +5,24 @@ import React from "react"
 import "./../../style.css"
 
 //render JSX into a DOM element
-/* FUNCTIONAL COMPONENT
+//FUNCTIONAL COMPONENT
 function TodoItem(props) {
   return (
     <div className='todo-item'>
-      <input type='checkbox' checked={props.todo.completed} />
+      <input
+        type='checkbox'
+        checked={props.todo.completed}
+        onChange={function () {
+          props.handleChange(props.todo.id)
+        }}
+      />
       <p>{props.todo.text}</p>
     </div>
   )
-} */
+}
 
 //CLASS BASED COMPONENT
-class TodoItem extends React.Component {
+/* class TodoItem extends React.Component {
   //render method
   render() {
     //return JSX
@@ -25,7 +31,7 @@ class TodoItem extends React.Component {
         <input
           type='checkbox'
           checked={this.props.todo.completed}
-          /* event inline function */
+          event inline function
           onChange={function () {
             console.log("trying to change")
           }}
@@ -34,7 +40,7 @@ class TodoItem extends React.Component {
       </div>
     )
   }
-}
+} */
 
 //export TodoItem component
 export default TodoItem

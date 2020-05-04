@@ -9,17 +9,27 @@ class Event extends React.Component {
     super()
     //state object
     this.state = {
-      img: "./assets/images/img06.jpg"
+      img: "./assets/images/img01.jpg"
     }
+    //bind custom event methods
+    this.ChangeImage = this.ChangeImage.bind(this)
+  }
+
+  ChangeImage() {
+    //setState method
+    this.setState(function () {
+      //return new state object
+      let i = 1
+      i += 1
+      console.log(i)
+      return {
+        img: "./assets/images/img0" + i + ".jpg"
+      }
+    })
   }
 
   //render method
   render() {
-    //event function
-    function Clicker() {
-      console.log("Clicked I was!")
-    }
-
     //return JSX into DOM element
     return (
       <div>
@@ -35,7 +45,7 @@ class Event extends React.Component {
         <br />
         <br />
         {/* pass event into event method */}
-        <button onClick={Clicker}>Click me!</button>
+        <button onClick={this.ChangeImage}>Change image!</button>
       </div>
     )
   }

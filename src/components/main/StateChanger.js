@@ -7,44 +7,41 @@ class StateChanger extends React.Component {
   constructor() {
     //super method
     super()
-
     //state object
     this.state = {
-      count: 0
+      counter: 0
     }
-
-    //always use BIND method to change STATE with setState method
-    this.handleClick = this.handleClick.bind(this)
+    //bind custom method when changing state with setState method
+    this.CounterStrike = this.CounterStrike.bind(this)
   }
-
-  //event method
-  handleClick() {
+  //onClick event method
+  CounterStrike() {
     //test with console
-    /* console.log("The change has begun!") */
+    /* console.log("CS_1.6") */
 
-    //to change STATE use setState() method
+    //use setState method to set object parameter / OR
+    /* this.setState({ counter: 5 }) */
 
-    //pass previous(starting) state as prevState parameter
+    //setState with function - pass previous state as a parameter
     this.setState(function (prevState) {
-      //return modified STATE object
+      //return new state object
       return {
-        count: prevState.count + 1
+        counter: prevState.counter + 1
       }
     })
   }
 
-  //render method
+  //render method - render JSX into DOM element
   render() {
-    //return JSX into DOM element
+    //return JSX
     return (
       <div>
-        <h1>{this.state.count}</h1>
-
-        {/* passing event method*/}
-        <button onClick={this.handleClick}>Change!</button>
+        <h1>{this.state.counter}</h1>
+        <button onClick={this.CounterStrike}>Strike</button>
       </div>
     )
   }
 }
 
+//export component
 export default StateChanger

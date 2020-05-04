@@ -93,6 +93,24 @@ class Content extends React.Component {
       todos: dataToDos,
       jokes: dataJokes
     }
+    //bind handleChange method to use set State
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  //event handler method
+  handleChange(id) {
+    /* console.log("Handle change.", id) */
+    this.setState(function (prevState) {
+      const updatedTodos = prevState.todos.map(function (todo) {
+        if (todo.id === id) {
+          todo.completed = !todo.completed
+        }
+        return todo
+      })
+      return {
+        todos: updatedTodos
+      }
+    })
   }
 
   render() {
@@ -113,7 +131,8 @@ class Content extends React.Component {
 
     //TODO
     const todoItems = this.state.todos.map((item) => (
-      <TodoItem key={item.id} todo={item} />
+      //pass method to TodoItem component
+      <TodoItem key={item.id} todo={item} handleChange={this.handleChange} />
     ))
 
     //JOKES
@@ -129,7 +148,9 @@ class Content extends React.Component {
         <hr />
         <div className='contact-list'>{contactComponents}</div>
         <hr />
-        <div className='todo-list'>{todoItems}</div>
+        <div className='todo-list' onChange={this.handleChange.id}>
+          {todoItems}
+        </div>
         <hr />
         <div className='joke-list'>{jokeComponents}</div>
         <hr />
