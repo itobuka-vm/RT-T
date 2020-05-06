@@ -2,7 +2,7 @@
 import React from "react"
 
 //render JSX into a DOM element
-/* FUNCTIONAL COMPONENT
+// FUNCTIONAL COMPONENT
 function Product(props) {
   return (
     <div className='product-container'>
@@ -20,10 +20,10 @@ function Product(props) {
       </ul>
     </div>
   )
-} */
+}
 
 //CLASS BASED COMPONENT
-class Product extends React.Component {
+/* class Product extends React.Component {
   render() {
     return (
       <div className='product-container'>
@@ -42,6 +42,6 @@ class Product extends React.Component {
       </div>
     )
   }
-}
+} */
 
 export default Product

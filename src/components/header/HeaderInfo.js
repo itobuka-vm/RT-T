@@ -31,7 +31,9 @@ class HeaderInfo extends React.Component {
       name: "Company Name",
       address: "Company Address",
       mail: "Company Email",
-      phone: "Company Phone"
+      phone: "Company Phone",
+      langPrim: "Srpski",
+      langSec: "Espanol"
     }
   }
 
@@ -47,8 +49,8 @@ class HeaderInfo extends React.Component {
         <p>
           Language
           <select>
-            <option>Srpski</option>
-            <option>Espanol</option>
+            <option>{this.state.langPrim}</option>
+            <option>{this.state.langSec}</option>
           </select>
         </p>
       </div>

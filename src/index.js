@@ -1,16 +1,13 @@
 /*
-  root(index)/
-    App/
-      Header/
-        Header-info
-        Nav
-      Main/
-        Landing
-        About
-        Gallery
-      Footer/
-        Footer-info
-        Footer-copyright
+  index.html
+    < index.js
+      < App.js
+        < Router
+          < Header.js
+            < HeaderInfo.js
+            < Navbar.js
+          < PageSwitcher
+        < Footer
 */
 
 // import React and ReactDOM libraries

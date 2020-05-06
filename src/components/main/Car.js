@@ -1,6 +1,6 @@
 import React from "react"
 
-/* FUNCTIONAL COMPONENT
+//FUNCTIONAL COMPONENT
 function Car(props) {
   return (
     <div>
@@ -20,10 +20,10 @@ function Car(props) {
       </p>
     </div>
   )
-} */
+}
 
 //CLASS BASED COMPONENT
-class Car extends React.Component {
+/* class Car extends React.Component {
   render() {
     return (
       <div>
@@ -44,6 +44,6 @@ class Car extends React.Component {
       </div>
     )
   }
-}
+} */
 
 export default Car

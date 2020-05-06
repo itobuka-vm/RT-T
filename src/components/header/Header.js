@@ -3,24 +3,24 @@ import React from "react"
 
 //import Header components
 import HeaderInfo from "./HeaderInfo"
-import HeaderNav from "./HeaderNav"
+import Navbar from "./Navbar"
 
 //import Header component style
 import "./../../style.css"
 
 //render JSX into a DOM
-/* FUNCTIONAL COMPONENT
+// FUNCTIONAL COMPONENT
 function Header() {
   return (
     <header>
       <HeaderInfo />
-      <HeaderNav />
+      <Navbar />
     </header>
   )
-} */
+}
 
 //CLASS BASED COMPONENT
-class Header extends React.Component {
+/* class Header extends React.Component {
   render() {
     return (
       <header>
@@ -29,7 +29,7 @@ class Header extends React.Component {
       </header>
     )
   }
-}
+} */
 
 //export Header component
 export default Header

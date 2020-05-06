@@ -2,7 +2,6 @@
 import React from "react"
 
 //import components
-import TodoItem from "./TodoItem"
 import ContactCard from "./ContactCard"
 import Joke from "./Joke"
 import Product from "./Product"
@@ -13,70 +12,9 @@ import dataJokes from "../../data/dataJokes"
 import dataContacts from "../../data/dataContacts"
 import dataProducts from "../../data/dataProducts"
 import dataCars from "../../data/dataCars"
-import dataToDos from "../../data/dataToDos"
-
-//import StateComponent - state practice
-import StateComponent from "./StateComponent"
-import Login from "./Login"
 
 //event practice
 import Event from "./Event"
-import StateChanger from "./StateChanger"
-
-//render JSX into a DOM
-/* FUNCTIONAL COMPONENT
-function Content() {
-  //TODO
-  const todoItems = dataToDos.map(function (item) {
-    return <TodoItem key={item.id} todo={item} />
-  })
-
-  //PRODUCTS
-  //map() through dataProducts to create an array of components
-  const productComponents = dataProducts.map(function (item) {
-    return <Product key={item.id} product={item} />
-  })
-
-  //JOKES
-  //map() through dataJokes to create an array of components (jokeComponents)
-  const jokeComponents = dataJokes.map(function (item) {
-    return <Joke key={item.id} joke={item} />
-  })
-
-  //CONTACTS
-  //map() through dataContacts to create an array of components (contactComponents)
-  const contactComponents = dataContacts.map(function (item) {
-    return <ContactCard key={item.id} contact={item} />
-  })
-
-  //CARS
-  //map() through dataCars to create an array of components (carComponents)
-  const carComponents = dataCars.map(function (item) {
-    return <Car key={item.id} car={item} />
-  })
-
-  return (
-    <div className='content'>
-      {/* testing img display from src/ &&/|| public/
-      <img src={"assets/img02.jpg"} alt='altos' /> 
-      <h3>About Section</h3>
-      {/* TODO app from lessons 
-      <div className='todo-list'>{todoItems}</div>
-      <hr />
-      {/* practice mapping components 
-      <div className='product-list'>{productComponents}</div>
-      <hr />
-      {/* display array of Components (contactComponents) 
-      <div className='contact-list'>{contactComponents}</div>
-      <hr />
-      {/* display array of Components (jokeComponents) 
-      <div className='joke-list'>{jokeComponents}</div>
-      <hr />
-      {/* carComponents 
-      <div className='car-list'>{carComponents}</div>
-    </div>
-  )
-} */
 
 //CLASS BASED COMPONENT
 class Content extends React.Component {
@@ -90,29 +28,11 @@ class Content extends React.Component {
       products: dataProducts,
       cars: dataCars,
       contacts: dataContacts,
-      todos: dataToDos,
       jokes: dataJokes
     }
-    //bind handleChange method to use set State
-    this.handleChange = this.handleChange.bind(this)
   }
 
-  //event handler method
-  handleChange(id) {
-    /* console.log("Handle change.", id) */
-    this.setState(function (prevState) {
-      const updatedTodos = prevState.todos.map(function (todo) {
-        if (todo.id === id) {
-          todo.completed = !todo.completed
-        }
-        return todo
-      })
-      return {
-        todos: updatedTodos
-      }
-    })
-  }
-
+  //render JSX into a DOM
   render() {
     //PRODUCTS - map() method through data in state
     const productComponents = this.state.products.map((item) => (
@@ -129,12 +49,6 @@ class Content extends React.Component {
       <ContactCard key={item.id} contact={item} />
     ))
 
-    //TODO
-    const todoItems = this.state.todos.map((item) => (
-      //pass method to TodoItem component
-      <TodoItem key={item.id} todo={item} handleChange={this.handleChange} />
-    ))
-
     //JOKES
     const jokeComponents = this.state.jokes.map((item) => (
       <Joke key={item.id} joke={item} />
@@ -148,19 +62,9 @@ class Content extends React.Component {
         <hr />
         <div className='contact-list'>{contactComponents}</div>
         <hr />
-        <div className='todo-list' onChange={this.handleChange.id}>
-          {todoItems}
-        </div>
-        <hr />
         <div className='joke-list'>{jokeComponents}</div>
         <hr />
-        <StateComponent />
-        <hr />
-        <Login />
-        <hr />
         <Event />
-        <hr />
-        <StateChanger />
       </div>
     )
   }

@@ -5,7 +5,7 @@ import React from "react"
 import "./../../style.css"
 
 //render JSX into DOM element
-/* FUNCTIONAL COMPONENT
+//FUNCTIONAL COMPONENT
 function ContactCard(props) {
   return (
     <div className='contact-card'>
@@ -15,10 +15,10 @@ function ContactCard(props) {
       <p>Email: {props.contact.email}</p>
     </div>
   )
-} */
+}
 
 //CLASS BASED COMPONENT
-class ContactCard extends React.Component {
+/* class ContactCard extends React.Component {
   render() {
     return (
       <div className='contact-card'>
@@ -29,7 +29,7 @@ class ContactCard extends React.Component {
       </div>
     )
   }
-}
+} */
 
 //export ContactCard component
 export default ContactCard
