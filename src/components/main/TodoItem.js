@@ -21,26 +21,5 @@ function TodoItem(props) {
   )
 }
 
-//CLASS BASED COMPONENT
-/* class TodoItem extends React.Component {
-  //render method
-  render() {
-    //return JSX
-    return (
-      <div className='todo-item'>
-        <input
-          type='checkbox'
-          checked={this.props.todo.completed}
-          event inline function
-          onChange={function () {
-            console.log("trying to change")
-          }}
-        />
-        <p>{this.props.todo.text}</p>
-      </div>
-    )
-  }
-} */
-
 //export TodoItem component
 export default TodoItem

@@ -16,20 +16,5 @@ function Joke(props) {
   )
 }
 
-//CLASS BASED COMPONENT
-/* class Joke extends React.Component {
-  //must have Render method
-  render() {
-    return (
-      in class based components props need this.
-      <li className='joke-item'>
-        <p>{this.props.joke.question}</p>
-        <p>{this.props.joke.punchLine}</p>
-        <hr />
-      </li>
-    )
-  }
-} */
-
 //export Joke component
 export default Joke

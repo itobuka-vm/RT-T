@@ -19,17 +19,5 @@ function Header() {
   )
 }
 
-//CLASS BASED COMPONENT
-/* class Header extends React.Component {
-  render() {
-    return (
-      <header>
-        <HeaderInfo />
-        <HeaderNav />
-      </header>
-    )
-  }
-} */
-
 //export Header component
 export default Header

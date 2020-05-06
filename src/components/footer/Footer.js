@@ -19,18 +19,5 @@ function Footer() {
   )
 }
 
-//CLASS BASED COMPONENT
-/* class Footer extends React.Component {
-  //must have Render method
-  render() {
-    return (
-      <footer>
-        <FooterInfo />
-        <FooterCopyright />
-      </footer>
-    )
-  }
-} */
-
 //export Footer component
 export default Footer

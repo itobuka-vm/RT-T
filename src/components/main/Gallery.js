@@ -11,16 +11,5 @@ function Gallery() {
   )
 }
 
-//CLASS BASED COMPONENT
-/* class Gallery extends React.Component {
-  render() {
-    return (
-      <div className='gallery'>
-        <h3>Gallery Section</h3>
-      </div>
-    )
-  }
-} */
-
 //export MainGallery component
 export default Gallery

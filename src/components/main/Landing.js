@@ -11,16 +11,5 @@ function Landing() {
   )
 }
 
-//CLASS BASED COMPONENT
-/* class Landing extends React.Component {
-  render() {
-    return (
-      <div className='landing-section'>
-        <div className='bg-placeholder'></div>
-      </div>
-    )
-  }
-} */
-
 //export MainLanding component
 export default Landing

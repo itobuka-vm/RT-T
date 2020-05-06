@@ -22,26 +22,4 @@ function Product(props) {
   )
 }
 
-//CLASS BASED COMPONENT
-/* class Product extends React.Component {
-  render() {
-    return (
-      <div className='product-container'>
-        <ul>
-          <li>
-            <img
-              src={this.props.product.imgUrl}
-              alt={this.props.product.imgAlt}
-              className='product-img'
-            />
-            <h3>{this.props.product.name}</h3>
-            <p>Price: {this.props.product.price}</p>
-            <p>Product description: {this.props.product.productDescription}</p>
-          </li>
-        </ul>
-      </div>
-    )
-  }
-} */
-
 export default Product

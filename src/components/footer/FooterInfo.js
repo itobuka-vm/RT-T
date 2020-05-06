@@ -11,17 +11,5 @@ function FooterInfo() {
   )
 }
 
-//CLASS BASED COMPONENT
-/* class FooterInfo extends React.Component {
-  //must have Render method
-  render() {
-    return (
-      <div className='footer-info'>
-        <h3>Footer Info Section</h3>
-      </div>
-    )
-  }
-} */
-
 //export FooterInfo component
 export default FooterInfo
