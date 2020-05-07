@@ -4,12 +4,6 @@ import React from "react"
 //import components
 import TodoItem from "./../components/main/TodoItem"
 
-//import StateComponent - state practice
-import StateComponent from "./../components/main/StateComponent"
-
-//event practice
-import StateChanger from "./../components/main/StateChanger"
-
 //import data - fake JSON/dummy DB
 import dataToDos from "./../data/dataToDos"
 
@@ -57,10 +51,6 @@ class TodoApp extends React.Component {
         <div className='todo-list' onChange={this.handleChange.id}>
           {todoItems}
         </div>
-        <hr />
-        <StateComponent />
-        <hr />
-        <StateChanger />
       </div>
     )
   }

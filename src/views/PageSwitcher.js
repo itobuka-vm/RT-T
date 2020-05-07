@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
 import Home from "./Home"
 import Website from "./Website"
+import Practice from "./Practice"
 import TodoApp from "./TodoApp"
 
 function PageSwitcher() {
@@ -16,6 +17,9 @@ function PageSwitcher() {
         </Route>
         <Route path='/website'>
           <Website />
+        </Route>
+        <Route path='/practice'>
+          <Practice />
         </Route>
         <Route path='/todoapp'>
           <TodoApp />

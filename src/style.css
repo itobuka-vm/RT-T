@@ -29,9 +29,9 @@ header {
   display: block;
   justify-content: center;
   text-align: center;
-  opacity: 0.5;
   /*** FIXED HEADER ***/
   position: fixed;
+  opacity: 0.5;
   top: 0;
   overflow: hidden;
 }

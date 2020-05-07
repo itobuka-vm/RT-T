@@ -6,35 +6,40 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
 //functional Navbar component
 function Navbar() {
+  //inline style objects
+  const PrimDesign = {
+    display: "flex",
+    justifyContent: "center",
+    listStyleType: "none"
+  }
+
+  const SecDesign = {
+    textDecoration: "none",
+    color: "white"
+  }
+
   //return JSX components into DOM element
   return (
     //i divided Link components from Switch and Route components
     <nav className='header-nav'>
-      <ul
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          listStyleType: "none"
-        }}
-      >
+      <ul style={PrimDesign}>
         <li>
-          <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>
+          <Link to={"/"} style={SecDesign}>
             Home |
           </Link>
         </li>
         <li>
-          <Link
-            to={"/website"}
-            style={{ textDecoration: "none", color: "white" }}
-          >
+          <Link to={"/website"} style={SecDesign}>
             Website |
           </Link>
         </li>
         <li>
-          <Link
-            to={"/todoapp"}
-            style={{ textDecoration: "none", color: "white" }}
-          >
+          <Link to={"/practice"} style={SecDesign}>
+            Practice |
+          </Link>
+        </li>
+        <li>
+          <Link to={"/todoapp"} style={SecDesign}>
             TodoApp
           </Link>
         </li>

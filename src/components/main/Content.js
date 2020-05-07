@@ -5,16 +5,11 @@ import React from "react"
 import ContactCard from "./ContactCard"
 import Joke from "./Joke"
 import Product from "./Product"
-import Car from "./Car"
 
 //import data - fake JSON/dummy DB
 import dataJokes from "../../data/dataJokes"
 import dataContacts from "../../data/dataContacts"
 import dataProducts from "../../data/dataProducts"
-import dataCars from "../../data/dataCars"
-
-//event practice
-import Event from "./Event"
 
 //CLASS BASED COMPONENT
 class Content extends React.Component {
@@ -26,7 +21,6 @@ class Content extends React.Component {
     this.state = {
       //pass imported DATA into STATE object properties
       products: dataProducts,
-      cars: dataCars,
       contacts: dataContacts,
       jokes: dataJokes
     }
@@ -37,11 +31,6 @@ class Content extends React.Component {
     //PRODUCTS - map() method through data in state
     const productComponents = this.state.products.map((item) => (
       <Product key={item.id} product={item} />
-    ))
-
-    //CARS
-    const carComponents = this.state.cars.map((item) => (
-      <Car key={item.id} car={item} />
     ))
 
     //CONTACTS
@@ -58,13 +47,9 @@ class Content extends React.Component {
       <div className='content'>
         <div className='product-list'>{productComponents}</div>
         <hr />
-        <div className='car-list'>{carComponents}</div>
-        <hr />
         <div className='contact-list'>{contactComponents}</div>
         <hr />
         <div className='joke-list'>{jokeComponents}</div>
-        <hr />
-        <Event />
       </div>
     )
   }

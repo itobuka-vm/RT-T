@@ -19,9 +19,12 @@ class Event extends React.Component {
     //setState method
     this.setState(function () {
       //return new state object
-      let i = 1
-      i += 1
-      console.log(i)
+      let i = Math.floor(Math.random() * 6)
+
+      if (i === 0) {
+        i += 1
+      }
+      /* console.log(i) */
       return {
         img: "./assets/images/img0" + i + ".jpg"
       }
@@ -30,12 +33,29 @@ class Event extends React.Component {
 
   //render method
   render() {
+    //inline style objects
+    const DivStyle = {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center"
+    }
+
+    const ImgStyle = {
+      width: "300px",
+      height: "300px",
+      margin: "auto"
+    }
+
+    const ButtonStyle = {
+      margin: "auto"
+    }
+
     //return JSX into DOM element
     return (
-      <div>
+      <div style={DivStyle}>
         <img
           src={this.state.img}
-          style={{ width: "300px" }}
+          style={ImgStyle}
           alt='test'
           /* implement function in event */
           onMouseOver={function () {
@@ -43,9 +63,10 @@ class Event extends React.Component {
           }}
         />
         <br />
-        <br />
         {/* pass event into event method */}
-        <button onClick={this.ChangeImage}>Change image!</button>
+        <button onClick={this.ChangeImage} style={ButtonStyle}>
+          Change image!
+        </button>
       </div>
     )
   }

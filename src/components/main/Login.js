@@ -9,7 +9,7 @@ class Login extends React.Component {
     super()
     //state object
     this.state = {
-      isLoggedIn: true
+      isLoggedIn: false
     }
   }
   //render method
