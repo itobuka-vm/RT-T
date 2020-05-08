@@ -4,7 +4,7 @@ import React from "react"
 function Car(props) {
   return (
     <div>
-      <h2>{props.car.carBrand + " " + props.car.carName}</h2>
+      <h3>{props.car.carBrand + " " + props.car.carName}</h3>
       <img
         src={props.car.carImgUrl}
         alt='default'

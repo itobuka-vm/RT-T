@@ -28,6 +28,14 @@ class Content extends React.Component {
 
   //render JSX into a DOM
   render() {
+    //style object
+    const InlineStyles = {
+      heading: {
+        padding: "1em 0",
+        textTransform: "uppercase",
+        textAlign: "center"
+      }
+    }
     //PRODUCTS - map() method through data in state
     const productComponents = this.state.products.map((item) => (
       <Product key={item.id} product={item} />
@@ -45,10 +53,13 @@ class Content extends React.Component {
 
     return (
       <div className='content'>
+        <h2 style={InlineStyles.heading}>Products</h2>
         <div className='product-list'>{productComponents}</div>
         <hr />
+        <h2 style={InlineStyles.heading}>Contacts</h2>
         <div className='contact-list'>{contactComponents}</div>
         <hr />
+        <h2 style={InlineStyles.heading}>Jokes</h2>
         <div className='joke-list'>{jokeComponents}</div>
       </div>
     )
