@@ -9,7 +9,7 @@ function Home() {
   const InlineStyles = {
     div: {
       padding: "5em 0 3em 0",
-      height: "91vh",
+      height: "100vh",
       textAlign: "center"
     },
     heading: {

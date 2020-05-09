@@ -1,24 +1,30 @@
 import React from "react"
 
-//import StateComponent - state practice
+// import StateComponent - state practice
 import StateComponent from "./../components/main/StateComponent"
 
-//event practice
+// event practice
 import StateChanger from "./../components/main/StateChanger"
 import Event from "./../components/main/Event"
 
 import Car from "./../components/main/Car"
 
-//import data
+// conditional rendering practice
+import UserStatus from "./../components/main/UserStatus"
+
+// import data
 import dataCars from "./../data/dataCars"
 import ConditionalRendering from "../components/main/ConditionalRendering"
+
+// import style
+import "./../style.css"
 
 class Practice extends React.Component {
   constructor() {
     super()
     this.state = {
       cars: dataCars,
-      //this used when making a call to API and in the meantime you want something to show up
+      // this used when making a call to API and in the meantime you want something to show up
       isLoading: true,
       unreadMsg: [
         "Better Call Saul",
@@ -28,12 +34,12 @@ class Practice extends React.Component {
     }
   }
 
-  ///componentDidMount() - lifecycle hook
-  //this is a chance to load something
-  // right after component load for the
-  //  first time on the screen
+  // componentDidMount() - lifecycle hook
+  // this is a chance to load something
+  //  right after component load for the
+  //   first time on the screen
   componentDidMount() {
-    //faking an API call with timeout function 2000 ms
+    // faking an API call with timeout function 2000 ms
     setTimeout(() => {
       this.setState({
         isLoading: false
@@ -42,7 +48,7 @@ class Practice extends React.Component {
   }
 
   render() {
-    //inline style object
+    // inline style object
     const InlineStyles = {
       div: {
         display: "flex",
@@ -65,39 +71,57 @@ class Practice extends React.Component {
         fontSize: "1em"
       }
     }
-    //CARS
+    // CARS
     const carComponents = this.state.cars.map((item) => (
       <Car key={item.id} car={item} />
     ))
 
     return (
-      <div style={InlineStyles.div}>
-        <h1 style={InlineStyles.heading}>Practice Page</h1>
-        <h2 style={InlineStyles.heading}>State</h2>
-        <StateComponent />
-        <hr />
-        <h2 style={InlineStyles.heading}>Change State</h2>
-        <StateChanger />
-        <hr />
-        <h2 style={InlineStyles.heading}>Event</h2>
-        <Event />
-        <hr />
-        <h2 style={InlineStyles.heading}>Cars</h2>
-        <div className='car-list'>{carComponents}</div>
-        <hr />
-        <h2 style={InlineStyles.heading}>Conditional Rendering</h2>
-        {/* <ConditionalRendering isLoading={this.state.isLoading} /> */}
-        {this.state.isLoading ? <h2>Loading...</h2> : <ConditionalRendering />}
-        {/* {this.state.unreadMsg.length > 0 ? (
-          <p style={InlineStyles.heading}>
-            You have {this.state.unreadMsg.length} unread messages!
-          </p>
-        ) : null} */}
-        {this.state.unreadMsg.length > 0 && (
-          <p style={InlineStyles.heading}>
-            You have {this.state.unreadMsg.length} unread messages!
-          </p>
-        )}
+      <div className='grid-container'>
+        <div className='grid-item item-1'>
+          {/* STATE */}
+          <h2 style={InlineStyles.heading}>State</h2>
+          <StateComponent />
+        </div>
+        <div className='grid-item item-2'>
+          {/* CHANGE STATE */}
+          <h2 style={InlineStyles.heading}>Change State</h2>
+          <StateChanger />
+        </div>
+        <div className='grid-item item-3'>
+          {/* EVENT */}
+          <h2 style={InlineStyles.heading}>Event</h2>
+          <Event />
+        </div>
+        <div className='grid-item item-4'>
+          {/* CARS */}
+          <h2 style={InlineStyles.heading}>Cars</h2>
+          <div className='car-list'>{carComponents}</div>
+        </div>
+        <div className='grid-item item-5'>
+          {/* CONDITIONAL RENDERING */}
+          <h2 style={InlineStyles.heading}>Conditional Rendering</h2>
+          {/* <ConditionalRendering isLoading={this.state.isLoading} /> */}
+          {this.state.isLoading ? (
+            <h2>Loading...</h2>
+          ) : (
+            <ConditionalRendering />
+          )}
+          {/* {this.state.unreadMsg.length > 0 ? (
+            <p style={InlineStyles.heading}>
+              You have {this.state.unreadMsg.length} unread messages!
+            </p>
+          ) : null} */}
+          {this.state.unreadMsg.length > 0 && (
+            <p style={InlineStyles.heading}>
+              You have {this.state.unreadMsg.length} unread messages!
+            </p>
+          )}
+        </div>
+        <div className='grid-item item-6'>
+          {/* USER STATUS */}
+          <UserStatus />
+        </div>
       </div>
     )
   }
