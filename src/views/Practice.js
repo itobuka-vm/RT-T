@@ -10,7 +10,7 @@ import Event from "./../components/main/Event"
 import Car from "./../components/main/Car"
 
 // conditional rendering practice
-import UserStatus from "./../components/main/UserStatus"
+import LogInStatus from "./../components/main/LogInStatus"
 
 // import data
 import dataCars from "./../data/dataCars"
@@ -120,7 +120,7 @@ class Practice extends React.Component {
         </div>
         <div className='grid-item item-6'>
           {/* USER STATUS */}
-          <UserStatus />
+          <LogInStatus />
         </div>
       </div>
     )
