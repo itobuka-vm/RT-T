@@ -68,12 +68,13 @@ header {
 
 .todo-list {
   margin: auto;
-  padding: 2px;
+  padding: 6em 15em 14em 15em;
+  background-color: wheat;
 }
 
 .todo-item {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .product-container ul {

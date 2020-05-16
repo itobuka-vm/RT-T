@@ -7,6 +7,13 @@ import "./../../style.css"
 //render JSX into a DOM element
 //FUNCTIONAL COMPONENT
 function TodoItem(props) {
+  //completed task style
+  const completedStyle = {
+    fontStyle: "italic",
+    color: "green",
+    textDecoration: "line-through"
+  }
+
   return (
     <div className='todo-item'>
       <input
@@ -16,7 +23,9 @@ function TodoItem(props) {
           props.handleChange(props.todo.id)
         }}
       />
-      <p>{props.todo.text}</p>
+      <p style={props.todo.completed ? completedStyle : null}>
+        {props.todo.text}
+      </p>
     </div>
   )
 }

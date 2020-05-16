@@ -49,6 +49,7 @@ class TodoApp extends React.Component {
     return (
       <div>
         <div className='todo-list' onChange={this.handleChange.id}>
+          <h1 style={{ textAlign: "center", padding: "1em 0" }}>Todo App</h1>
           {todoItems}
         </div>
       </div>

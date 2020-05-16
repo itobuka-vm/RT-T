@@ -8,7 +8,7 @@ function ConditionalRendering() {
       {/* <div>
       {props.isLoading ? <h2>Loading...</h2> : <h2>Conditional Rendering</h2>}
     </div> */}
-      <h2>Fully Loaded!</h2>
+      <h2 style={{ color: "green" }}>Fully Loaded!</h2>
     </div>
   )
 }

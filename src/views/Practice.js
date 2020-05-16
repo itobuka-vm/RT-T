@@ -103,7 +103,7 @@ class Practice extends React.Component {
           <h2 style={InlineStyles.heading}>Conditional Rendering</h2>
           {/* <ConditionalRendering isLoading={this.state.isLoading} /> */}
           {this.state.isLoading ? (
-            <h2>Loading...</h2>
+            <h2 style={{ color: "red" }}>Loading...</h2>
           ) : (
             <ConditionalRendering />
           )}
