@@ -7,6 +7,9 @@ import TodoItem from "./../components/main/TodoItem"
 //import data - fake JSON/dummy DB
 import dataToDos from "./../data/dataToDos"
 
+//fetch API
+import ApiFetcher from "./../components/main/ApiFetcher"
+
 //class based component
 class TodoApp extends React.Component {
   //constructor method
@@ -52,6 +55,8 @@ class TodoApp extends React.Component {
           <h1 style={{ textAlign: "center", padding: "1em 0" }}>Todo App</h1>
           {todoItems}
         </div>
+        <h2>Fetch Star Wars API</h2>
+        <ApiFetcher />
       </div>
     )
   }
